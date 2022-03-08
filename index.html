@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Text Selection</title>
+</head>
+<body>
+  <p class="bold" data-readable="true">
+    When the script is activated you will recieve the text you highlight in a paragraph tag below. 
+    You can also click on certain text elements to easily highlight the entire element.
+    <br>
+    Also, if you click on the text you just highlighted or on an element that does not have the 'data-readable' attribute your previous text will be 'unselected'.
+  </p>
+
+  <p class="bold">Try it out by setting the button to 'Activated'</p>
+  <button onClick="toggleTTS()">
+    <span class="span">Deactivated</span>
+  </button>
+  <ul>
+    <li data-readable>Try to click on me, I will be highlighted with only one click</li>
+    <li>I won't be highlighted with only one click, as I don't have a 'data-readable' attribute</li>
+    <li data-readable>I can also be clicked to be highlighted</li>
+  </ul>
+  <p data-readable>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum finibus arcu. In a elit odio. Pellentesque ut justo vel ex commodo rhoncus at nec velit. Proin in ultrices justo. Vivamus sit amet mi et lacus tempor pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur ac orci nec nisi sollicitudin sodales. Nam tempor orci dui, quis semper mi euismod nec.</p>
+
+  <p class="bold" data-readable>What you highlighted:</p>
+  <p class="display-selected"></p>
+  <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
